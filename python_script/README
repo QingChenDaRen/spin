@@ -1,11 +1,13 @@
-launch this script using:
+Launch this script using:
 
-python luigi_fit.py LaunchAll --workers 2
+python luigi_fit.py LaunchAll --workers 30 (or any number)
 
-with luigid running in the background. --workers will only enable parallelization within a worker. It will not enable multicore processsing. For more infor on that, go to luigi mailing list and ask for help.
+with luigid (server) running in the background. This uses the central-scheduler.
 
+--workers will enable parallel processing of a single workers load.
 
-path_to_data - set to path to the data
-path_to_rundir - This is where the tcl_script is run from. set to the path where the background files are saved and where the MiD ordered lists are. The text files which are output from the fitting will be saved here.
+path_to_data - This is the path to the data
+path_to_rundir - This is where the tcl_script is run from. Background files and the MiD ordered lists should be saved in this folder. 
+The text files containing the parameters values for each data file which are output from the model-fitting run will be saved here.
 
-tcl_script and the list of observations should be in the same folder as the luigi_fit.py
+The tcl_script and list of observations should be in the same folder as the luigi_fit.py.
