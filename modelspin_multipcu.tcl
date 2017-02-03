@@ -1,4 +1,4 @@
-proc myfit {N datafilename pculist} {
+proc myfit {datafilename pculist} {
 # Return TCL results for XSPEC commands.
   set xs_return_result 1
 
@@ -173,7 +173,7 @@ proc myfit {N datafilename pculist} {
   scan $xspec_tclout "%f" par24
 
 #Output line
-  puts $chan "$obsname \t$mychi \t$mydof \t$par1 \t$par2 \t$par3 \t$par4 \t$par5 \t$par6 \t$par7 \t$par8 \t$par9 \t$par10 \t$par11 \t$par12 \t$par13 \t$par14 \t$par15 \t$par16 \t$par17 \t$par18 \t$par19 \t$par20 \t$par21 \t$par22 \t$par23 \t$par24"
+puts $chan "$obsname \t$mychi \t$mydof  \t${M} \t${inc} \t${D} \t$par1 \t$par2 \t$par3 \t$par4 \t$par5 \t$par6 \t$par7 \t$par8 \t$par9 \t$par10 \t$par11 \t$par12 \t$par13 \t$par14 \t$par15 \t$par16 \t$par17 \t$par18 \t$par19 \t$par20 \t$par21 \t$par22 \t$par23 \t$par24"
 
 # End of while loop
 }

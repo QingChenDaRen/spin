@@ -83,9 +83,9 @@ set COMMENTED_OUT {
 # Set Normalization constants for PCUs. Normalized to PCU2.
   set p 1
   foreach j $pculist {
-  newpar [expr {15 * $p}] 1.0 0.01
+  newpar [expr {24 * $p}] 1.0 0.01
     if $j==2 {
-    newpar [expr {15 * $p}] 1.0 -0.01
+    newpar [expr {24 * $p}] 1.0 -0.01
     }
   incr p  
   }
