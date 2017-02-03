@@ -19,10 +19,17 @@ then
   		pcunum[${i}]="${String:$i:1}" 
 	done
 
+#xspec<<EOF
+
+#source modelspin_multipcu_TEST_m2l.tcl
+#myfit ${obsname} [list ${pcunum[*]}]
+
+#EOF
+
 xspec<<EOF
 
-source mymodelspin_multipcu.tcl
-myfit $N ${obsname} [list ${pcunum[*]}]
+source modelspin_multipcu_TEST_m2h.tcl
+myfit ${obsname} [list ${pcunum[*]}]
 
 EOF
 
@@ -36,4 +43,4 @@ fi
 
 #done < numpcu_obs_hard.ls
 #done < numpcu_obs_hard_relxill.ls
-done < test.ls
+done < test_multiple.ls
