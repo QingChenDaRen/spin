@@ -1,4 +1,4 @@
-proc myfit {datafilename path_to_data} {
+proc myfit {datafilename} {
 # Return TCL results for XSPEC commands.
 set xs_return_result 1
 
@@ -7,8 +7,7 @@ query no
 
 # Go to Data directory
 # TODO: SET PATH TO DIRECTORY HERE
-# rundir where all the background files are saved.
-cd ~/Documents/xrayspectralanalysis/data/grs1915/spin_project/rundir/
+cd ..
 
 # Set model number
 set mod m98
@@ -37,7 +36,7 @@ set obsname [lindex $y 0].[lindex $y 1].[lindex $y 2]
   abund wilm
 
 
-  data ${path_to_data}/${obsname}.pha
+  data ${obsname}.pha
   ignore 0.0-2.52
   ignore 45.0-**
   setplot energy
