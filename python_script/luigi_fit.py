@@ -44,6 +44,7 @@ class SingleFit(luigi.Task):
 class LaunchAll(luigi.Task):
 
     obslist = set(line.strip() for line in open('testlist.dat'))
+    #: Temp hardcoded parameters. Feed as inputs.
     tcl_script = 'modelspin_singlepcu_m2l.tcl'
     path_to_data = '/Users/charith/Documents/xrayspectralanalysis/data/grs1915/soft_steady/znsrun1_phacorr'
     path_to_rundir = '/Users/charith/Documents/xrayspectralanalysis/data/grs1915/spin_project/rundir'
