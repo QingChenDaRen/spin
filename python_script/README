@@ -1,3 +1,5 @@
+# Running parallel_model_fit
+
 Launch this script using:
 
 python parallel_model_fit.py LaunchAll --workers 30 (or any number of workers needed)
@@ -12,3 +14,5 @@ be saved within this folder. The text files containing the parameters values for
 the model-fitting run will also be saved here.
 
 The tcl_script and list of observations should be in the same folder as the luigi_fit.py.
+
+Spin calculation code is being developed.
