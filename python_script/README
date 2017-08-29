@@ -1,6 +1,6 @@
 Launch this script using:
 
-python luigi_fit.py LaunchAll --workers 30 (or any number of workers needed)
+python parallel_model_fit.py LaunchAll --workers 30 (or any number of workers needed)
 
 with luigid (server) running in the background. This allows use of the central-scheduler.
 
